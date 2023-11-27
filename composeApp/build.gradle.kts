@@ -7,6 +7,11 @@ plugins {
     alias(libs.plugins.jetbrainsCompose)
 }
 
+repositories {
+    mavenCentral()
+    google()
+}
+
 kotlin {
     androidTarget {
         compilations.all {
@@ -36,6 +41,12 @@ kotlin {
             implementation(libs.compose.ui)
             implementation(libs.compose.ui.tooling.preview)
             implementation(libs.androidx.activity.compose)
+            implementation(libs.ktor.client.okhttp)
+            implementation(libs.kotlinx.coroutines.android)
+            implementation("androidx.compose.material3:material3:1.1.2")
+            implementation("androidx.compose.material3:material3-window-size-class:1.1.2")
+            implementation("androidx.compose.material:material-icons-core:1.3.1")
+            implementation("androidx.compose.material:material-icons-extended:1.3.1")
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
@@ -46,7 +57,10 @@ kotlin {
             implementation(compose.material)
             @OptIn(ExperimentalComposeLibrary::class)
             implementation(compose.components.resources)
+            implementation(libs.ktor.client.core)
+            implementation(libs.kotlinx.coroutines.core)
         }
+        //for iOS {implementation(libs.ktor.client.darwin)}
     }
 }
 
@@ -70,12 +84,16 @@ android {
     }
     composeOptions {
         kotlinCompilerExtensionVersion = libs.versions.compose.compiler.get()
+        //kotlinCompilerExtensionVersion = "1.1.1"
     }
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
+            excludes += "/META-INF/INDEX.LIST"
+            excludes += "/META-INF/io.netty.versions.properties"
         }
     }
+
     buildTypes {
         getByName("release") {
             isMinifyEnabled = false
@@ -88,6 +106,9 @@ android {
     dependencies {
         debugImplementation(libs.compose.ui.tooling)
     }
+}
+dependencies {
+    implementation(libs.androidx.material)
 }
 
 compose.desktop {
