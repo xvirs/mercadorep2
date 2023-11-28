@@ -47,6 +47,7 @@ kotlin {
             implementation("androidx.compose.material3:material3-window-size-class:1.1.2")
             implementation("androidx.compose.material:material-icons-core:1.3.1")
             implementation("androidx.compose.material:material-icons-extended:1.3.1")
+
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
@@ -59,6 +60,12 @@ kotlin {
             implementation(compose.components.resources)
             implementation(libs.ktor.client.core)
             implementation(libs.kotlinx.coroutines.core)
+
+            implementation("io.ktor:ktor-client-cio:2.3.6")
+
+            implementation("io.ktor:ktor-client-core:2.3.6")
+            implementation("io.ktor:ktor-client-json:1.6.4")
+            implementation("io.ktor:ktor-client-serialization:2.3.6")
         }
         //for iOS {implementation(libs.ktor.client.darwin)}
     }
