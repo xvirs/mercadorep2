@@ -5,6 +5,7 @@ plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsCompose)
+    id("org.jetbrains.kotlin.plugin.serialization") version "1.9.0"
 }
 
 repositories {
@@ -62,6 +63,9 @@ kotlin {
             implementation(libs.kotlinx.coroutines.core)
 
             implementation("io.ktor:ktor-client-cio:2.3.6")
+
+            implementation("io.ktor:ktor-client-content-negotiation:2.3.6")
+            implementation("io.ktor:ktor-serialization-kotlinx-json:2.3.6")
 
             implementation("io.ktor:ktor-client-core:2.3.6")
             implementation("io.ktor:ktor-client-json:1.6.4")
