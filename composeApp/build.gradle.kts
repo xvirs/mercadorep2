@@ -49,6 +49,8 @@ kotlin {
             implementation("androidx.compose.material:material-icons-core:1.3.1")
             implementation("androidx.compose.material:material-icons-extended:1.3.1")
 
+            implementation("io.insert-koin:koin-android:3.2.0")
+
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
@@ -59,17 +61,23 @@ kotlin {
             implementation(compose.material)
             @OptIn(ExperimentalComposeLibrary::class)
             implementation(compose.components.resources)
-            implementation(libs.ktor.client.core)
+
             implementation(libs.kotlinx.coroutines.core)
 
+            implementation(libs.ktor.client.core)
             implementation("io.ktor:ktor-client-cio:2.3.6")
-
             implementation("io.ktor:ktor-client-content-negotiation:2.3.6")
             implementation("io.ktor:ktor-serialization-kotlinx-json:2.3.6")
-
             implementation("io.ktor:ktor-client-core:2.3.6")
             implementation("io.ktor:ktor-client-json:1.6.4")
             implementation("io.ktor:ktor-client-serialization:2.3.6")
+
+            implementation("io.ktor:ktor-client-logging:2.3.6")
+            implementation("io.insert-koin:koin-core:3.4.0")
+            implementation("io.insert-koin:koin-ktor:3.4.0")
+            implementation("io.insert-koin:koin-logger-slf4j:3.4.0")
+            implementation("io.insert-koin:koin-android:3.4.0")
+
         }
         //for iOS {implementation(libs.ktor.client.darwin)}
     }
