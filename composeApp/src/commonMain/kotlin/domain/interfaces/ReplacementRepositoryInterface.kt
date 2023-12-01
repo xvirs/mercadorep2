@@ -1,8 +1,8 @@
 package domain.interfaces
 
 import domain.models.AutoParte
-import kotlinx.coroutines.flow.Flow
+import domain.models.StatusResult
 
 interface ReplacementRepositoryInterface {
-    suspend fun getReplacement() : Flow<List<AutoParte>>
+    suspend fun getReplacement() : StatusResult<List<AutoParte>>
 }

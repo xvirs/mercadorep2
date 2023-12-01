@@ -1,11 +1,11 @@
-import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import org.jetbrains.compose.ExperimentalComposeLibrary
+import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsCompose)
-    id("org.jetbrains.kotlin.plugin.serialization") version "1.9.0"
+    id ("org.jetbrains.kotlin.plugin.serialization") version "1.9.0"
 }
 
 repositories {

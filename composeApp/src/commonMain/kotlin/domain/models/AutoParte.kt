@@ -1,5 +1,8 @@
 package domain.models
 
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class AutoParte(
     val estate: String,
     val id: Int,

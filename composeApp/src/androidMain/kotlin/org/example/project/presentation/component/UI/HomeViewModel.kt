@@ -7,6 +7,5 @@ import kotlinx.coroutines.flow.MutableStateFlow
 class HomeViewModel(val useCase: ReplacementUseCase):ViewModel() {
 
     var replacement: MutableStateFlow<AutoParte?> = MutableStateFlow(null)
-
-
+    
 }
