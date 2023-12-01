@@ -31,7 +31,7 @@ class ReplacementDataSourceRemote(private val baseClient: BaseClient ) : Replace
         url: String,
         messageError: String
     ): StatusResult<AutoParteDTO> {
-        var httpResult = baseClient.get(BASE_URL, messageError)
+        val httpResult = baseClient.get(BASE_URL, messageError)
         try {
             httpResult.httpResponse?.let { return StatusResult.Success(value = it.body()) }
             return StatusResult.Error(httpResult.errorMessage)
