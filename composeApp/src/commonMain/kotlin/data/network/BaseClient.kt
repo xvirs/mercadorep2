@@ -8,7 +8,6 @@ import io.ktor.client.statement.HttpResponse
 import io.ktor.serialization.kotlinx.json.json
 import kotlinx.serialization.json.Json
 
-
 class BaseClient() {
 
     val apiClient: HttpClient = HttpClient(CIO) {
