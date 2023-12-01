@@ -1,20 +1,18 @@
 package data.datasource
 
 
-import data.network.BaseClient
 import data.interfaces.ReplacementDataSourceRemoteInterface
 import data.models.AutoParteDTO
+import data.network.BaseClient
 import domain.models.AutoParte
 import domain.models.StatusResult
 import io.ktor.client.call.body
 import io.ktor.serialization.JsonConvertException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.IO
-
 import kotlinx.coroutines.withContext
 
-class ReplacementDataSourceRemote() : ReplacementDataSourceRemoteInterface {
-    private val baseClient: BaseClient = BaseClient()
+class ReplacementDataSourceRemote(private val baseClient: BaseClient ) : ReplacementDataSourceRemoteInterface {
 
     companion object {
         const val BASE_URL: String = "https://b31962a72f2840dd9fd5af71a55d158d.api.mockbin.io/"

@@ -6,7 +6,6 @@ import domain.models.AutoParte
 import domain.models.StatusResult
 import domain.usecase.ReplacementUseCase
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.firstOrNull
 import kotlinx.coroutines.launch
 
 class HomeViewModel(private val useCase: ReplacementUseCase):ViewModel() {
