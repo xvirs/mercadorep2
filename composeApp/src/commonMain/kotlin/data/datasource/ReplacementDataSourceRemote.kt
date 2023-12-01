@@ -13,8 +13,8 @@ import kotlinx.coroutines.IO
 
 import kotlinx.coroutines.withContext
 
-class ReplacementDataSourceRemote() : ReplacementDataSourceRemoteInterface {
-    private val baseClient: BaseClient = BaseClient()
+class ReplacementDataSourceRemote( private val baseClient: BaseClient) : ReplacementDataSourceRemoteInterface {
+
 
     companion object {
         const val BASE_URL: String = "https://b31962a72f2840dd9fd5af71a55d158d.api.mockbin.io/"

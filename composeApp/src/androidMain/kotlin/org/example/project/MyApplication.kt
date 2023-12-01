@@ -22,7 +22,6 @@ class MyApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        initKoin()
         startKoin {
             androidContext(this@MyApplication)
             modules(viewModelModule)
