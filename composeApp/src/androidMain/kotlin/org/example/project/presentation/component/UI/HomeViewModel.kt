@@ -26,6 +26,7 @@ class HomeViewModel(private val useCase: ReplacementUseCase):ViewModel() {
         when ( val result = useCase.invoke()){
             is StatusResult.Success -> _replacement.value = result.value
             is StatusResult.Error -> _replacement.value = null
+            else -> {}
         }
     }
 }

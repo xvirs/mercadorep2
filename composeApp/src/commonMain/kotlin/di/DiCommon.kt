@@ -1,12 +1,9 @@
 package di
 
 import data.datasource.ReplacementDataSourceRemote
-import data.network.BaseClient
+import data.repository.ReplacementRepository
+import domain.usecase.ReplacementUseCase
 import org.koin.dsl.module
 
 
-    fun ClientModules() = module {
-        single { BaseClient() }
-        single { ReplacementDataSourceRemote(get()) }
-    }
 

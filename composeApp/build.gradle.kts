@@ -48,7 +48,6 @@ kotlin {
             implementation("androidx.compose.material3:material3-window-size-class:1.1.2")
             implementation("androidx.compose.material:material-icons-core:1.3.1")
             implementation("androidx.compose.material:material-icons-extended:1.3.1")
-
             implementation("io.insert-koin:koin-android:3.2.0")
 
         }
@@ -77,6 +76,8 @@ kotlin {
             implementation("io.insert-koin:koin-ktor:3.4.0")
             implementation("io.insert-koin:koin-logger-slf4j:3.4.0")
             implementation("io.insert-koin:koin-android:3.4.0")
+            implementation ("io.insert-koin:koin-androidx-compose:3.4.0")
+
 
         }
         //for iOS {implementation(libs.ktor.client.darwin)}

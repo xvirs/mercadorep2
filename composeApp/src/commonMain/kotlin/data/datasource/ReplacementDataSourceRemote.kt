@@ -12,10 +12,11 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.IO
 import kotlinx.coroutines.withContext
 
-class ReplacementDataSourceRemote(private val baseClient: BaseClient ) : ReplacementDataSourceRemoteInterface {
+class ReplacementDataSourceRemote() : ReplacementDataSourceRemoteInterface {
 
     companion object {
         const val BASE_URL: String = "https://b31962a72f2840dd9fd5af71a55d158d.api.mockbin.io/"
+        val baseClient: BaseClient = BaseClient()
     }
 
     override suspend fun getReplacement(): StatusResult<List<AutoParte>> =
